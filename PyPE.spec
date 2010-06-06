@@ -8,7 +8,7 @@ License:	GPL v2
 Group:		X11/Applications/Editors
 Source0:	http://dl.sourceforge.net/project/pype/pype/PyPE%202.9/%{name}-%{version}-src.zip
 # Source0-md5:	dbd964244cb89b8e15944e78be2e0d65
-URL:		http://netactview.sourceforge.net
+URL:		http://pype.sourceforge.net
 Requires:	python
 Requires:	python-wxPython
 Requires:	wxGTK2-unicode-devel
