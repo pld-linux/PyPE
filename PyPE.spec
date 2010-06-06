@@ -31,7 +31,6 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name}/macros/samples}
 install -d $RPM_BUILD_ROOT{%{_datadir}/%{name}/icons,%{_datadir}/%{name}/plugins}
 
-#install pype.py $RPM_BUILD_ROOT%{_bindir}
 install {*.py,*.pyw,*.cfg,sample_alphabet.txt,sample_dictionary.txt} $RPM_BUILD_ROOT%{_datadir}/%{name}
 install macros/samples/*  $RPM_BUILD_ROOT%{_datadir}/%{name}/macros/samples/
 install plugins/* $RPM_BUILD_ROOT%{_datadir}/%{name}/plugins/
