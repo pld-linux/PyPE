@@ -11,6 +11,7 @@ Source0:	http://dl.sourceforge.net/project/pype/pype/PyPE%202.9/%{name}-%{versio
 URL:		http://netactview.sourceforge.net
 Requires:	python
 Requires:	python-wxPython
+Requires:	wxGTK2-unicode-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
