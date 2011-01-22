@@ -6,9 +6,11 @@ Version:	2.9.1
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Editors
-Source0:	http://dl.sourceforge.net/project/pype/pype/PyPE%202.9/%{name}-%{version}-src.zip
+Source0:	http://downloads.sourceforge.net/project/pype/pype/PyPE%202.9/%{name}-%{version}-src.zip
 # Source0-md5:	dbd964244cb89b8e15944e78be2e0d65
 URL:		http://pype.sourceforge.net
+BuildRequires:	rpm-pythonprov
+BuildRequires:	unzip
 Requires:	python
 Requires:	python-wxPython
 Requires:	wxGTK2-unicode-devel
@@ -39,7 +41,7 @@ install icons/* $RPM_BUILD_ROOT%{_datadir}/%{name}/icons/
 
 #TODO - better way to start program
 echo '#!/bin/sh' > $RPM_BUILD_ROOT%{_bindir}/pype
-echo 'exec python /usr/share/PyPE/pype.py "$@"' >> $RPM_BUILD_ROOT%{_bindir}/pype
+echo 'exec python %{_datadir}/PyPE/pype.py "$@"' >> $RPM_BUILD_ROOT%{_bindir}/pype
 
 %files
 %defattr(644,root,root,755)
