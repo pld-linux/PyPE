@@ -22,9 +22,6 @@ A Python-oriented editor with support for multiple platforms.
 %description -l pl.UTF-8
 Edytor ukierunkowany na Pythona ze wsparciem dla wielu platform.
 
-%clean
-rm -rf $RPM_BUILD_ROOT
-
 %prep
 %setup -q
 
@@ -42,6 +39,9 @@ install icons/* $RPM_BUILD_ROOT%{_datadir}/%{name}/icons/
 #TODO - better way to start program
 echo '#!/bin/sh' > $RPM_BUILD_ROOT%{_bindir}/pype
 echo 'exec python %{_datadir}/PyPE/pype.py "$@"' >> $RPM_BUILD_ROOT%{_bindir}/pype
+
+%clean
+rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
